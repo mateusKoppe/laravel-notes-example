@@ -35,7 +35,12 @@ class NoteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $note = Note::create([
+            'title' => $request->title,
+            'description' => $request->description,
+            'schedule' => $request->schedule
+        ]);
+        return redirect()->route('notes.index');
     }
 
     /**

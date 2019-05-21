@@ -5,6 +5,7 @@
     <h1>Notas</h1>
     <h2>Adiciona notas</h2>
     <form action="{{ route('notes.store') }}" method="POST" class="form">
+        @csrf
         <div class="form-group">
             <label for="title">Título</label>
             <input type="text" name="title" class="form-control" id="title" placeholder="Título">
