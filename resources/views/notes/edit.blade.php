@@ -12,6 +12,6 @@
         <button class="btn btn-success">Editar</button>
     </form>
     <hr>
-    <a class="btn btn-secondary" href="{{ route('notes.index') }}">Volta para lista</a>
+    <a class="btn btn-secondary" href="{{ route('notes.show', $note) }}">Volta para nota</a>
 </div>
 @endsection
