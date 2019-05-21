@@ -94,4 +94,17 @@ class NoteController extends Controller
         $note->delete();
         return redirect()->route('notes.index');
     }
+
+    public function trash()
+    {
+        $notes = Note::onlyTrashed()->get();
+        return view('notes.trash', ["notes" => $notes]);
+    }
+
+    public function trashRestore($noteId)
+    {
+        $note = Note::onlyTrashed()->find($noteId);
+        $note->restore();
+        return redirect()->route('notes.index');
+    }
 }

@@ -27,6 +27,7 @@
 
     <div class="mt-2">
         <a class="btn btn-primary" href="{{ route('notes.create') }}">Adicionar</a>
+        <a class="btn btn-secondary" href="{{ route('notes.trash') }}">Lixeira</a>
     </div>
 </div>
 @endsection

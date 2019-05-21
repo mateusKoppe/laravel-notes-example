@@ -15,4 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/notes/trash', 'NoteController@trash')->name('notes.trash');
+Route::get('/notes/trash/restore/{note}', 'NoteController@trashRestore')->name('notes.trashRestore');
 Route::resource('/notes', 'NoteController');
