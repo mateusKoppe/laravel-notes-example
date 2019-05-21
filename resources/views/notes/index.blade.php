@@ -1,7 +1,9 @@
 @extends('layouts.main')
 
 @section('content')
-<h1>Notas</h1>
+<div class="container mt-5">
+    <h1>Notas</h1>
 
-<a href="/notes/create">Adicionar</a>
+    <a class="btn btn-primary" href="{{ route('notes.create') }}">Adicionar</a>
+</div>
 @endsection
