@@ -13,7 +13,11 @@
         @endif
         <div class="mt-2">
             <a href="{{ route('notes.edit', $note) }}" class="btn btn-sm btn-primary">Editar</a>
-            <a href="{{ route('notes.destroy', $note) }}" class="btn btn-sm btn-danger">Deletar</a>
+            <form action="{{ route('notes.destroy', $note) }}" class="d-inline" method="POST">
+                @csrf
+                @method('delete')
+                <button href="" class="btn btn-sm btn-danger">Deletar</button>
+            </form>
         </div>
     </div>
     <hr>
