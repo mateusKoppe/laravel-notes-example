@@ -63,7 +63,7 @@ class NoteController extends Controller
      */
     public function edit(Note $note)
     {
-        //
+        return view('notes.edit', ["note" => $note]);
     }
 
     /**
@@ -75,7 +75,12 @@ class NoteController extends Controller
      */
     public function update(Request $request, Note $note)
     {
-        //
+        $note->update([
+            "title" => $request->title,
+            "description" => $request->description,
+            "schedule" => $request->schedule
+        ]);
+        return redirect()->route('notes.index');
     }
 
     /**

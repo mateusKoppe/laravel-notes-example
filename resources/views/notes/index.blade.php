@@ -17,6 +17,9 @@
                     <br>
                     <b>Para:</b> {{$note->schedule->format('d/m/Y')}}
                     @endif
+                    <div class="mt-2">
+                        <a href="{{ route('notes.edit', $note) }}" class="btn btn-sm btn-secondary">Editar</a>
+                    </div>
                 </div>
             </div>
         </div>
