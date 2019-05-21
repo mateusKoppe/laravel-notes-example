@@ -14,7 +14,7 @@ class NoteController extends Controller
      */
     public function index()
     {
-        $notes = Note::all();
+        $notes = Note::paginate(1);
         return view('notes.index', ["notes" => $notes]);
     }
 
