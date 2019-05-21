@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/notes', 'NoteController@index');
+Route::resource('/notes', 'NoteController');
