@@ -16,8 +16,8 @@ class Notes extends Migration
         Schema::create('notes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
-            $table->text('description');
-            $table->datetime('schedule');
+            $table->text('description')->nullable();
+            $table->datetime('schedule')->nullable();
             $table->timestamps();
         });
     }
