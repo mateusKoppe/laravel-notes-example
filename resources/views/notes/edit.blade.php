@@ -8,19 +8,7 @@
         @csrf
 
         @method('PUT')
-
-        <div class="form-group">
-            <label for="title">Título</label>
-            <input type="text" name="title" class="form-control" id="title" placeholder="Título" value="{{$note->title}}">
-        </div>
-        <div class="form-group">
-            <label for="description">Descrição</label>
-            <textarea type="text" name="description" placeholder="Descrição" class="form-control" id="description">{{$note->description}}</textarea>
-        </div>
-        <div class="form-group">
-            <label for="schedule">Para quando</label>
-            <input type="date" name="schedule" class="form-control" id="schedule" value="{{$note->schedule->format('Y-m-d')}}">
-        </div>
+        @include('notes.form', ["note" => $note])
         <button class="btn btn-success">Editar</button>
     </form>
     <hr>
